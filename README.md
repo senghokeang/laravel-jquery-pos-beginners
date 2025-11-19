@@ -50,7 +50,7 @@ cp .env.example .env
 php artisan key:generate
 
 # Run database migrations
-php artisan migrate
+php artisan migrate:fresh --seed
 
 # Link storage (if using images)
 php artisan storage:link
@@ -59,6 +59,15 @@ php artisan storage:link
 php artisan serve
 
 ```
+### **Default User Accounts**
+
+The following table lists the pre-configured user accounts and their corresponding default passwords:
+
+| Username | Role | Default Password |
+| :--- | :--- | :--- |
+| `superadmin` | Highest level of access (Configuration, User Management, etc.) | `123456` |
+| `admin` | Standard administrative privileges (Content/Data Management) | `123456` |
+| `cashier` | Restricted access (Point-of-Sale, Transaction Processing) | `123456` |
 
 ## 📦 Tech Stack
 - Laravel 12
